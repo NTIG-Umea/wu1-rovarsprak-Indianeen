@@ -23,6 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const translate = (text) => {
     // översätt texten till rövarspråket
+
+    let message = JOptionPane.showInputDialog("Skriv ord att översätta.");
+    let konsonanter = "bcdfghjklmnpqrstvwxz";
+    let translation = new StringBuilder();
+
+
+
+    for(char ; message.toLowerCase().toCharArray();) {
+        if (konsonanter.indexOf(c) > 0) {
+            translation.append(c).append("o").append(c);
+        }else {
+            translation.append(c);
+        }
+
+    }
+
+    System.out.println(translation);
     console.log(text)
     return text;
 };
@@ -34,4 +51,4 @@ const display = (translation, element) => {
     p.textContent = translation;
     // fäst elementet
     element.insertBefore(p, element.firstChild);
-}
+};
